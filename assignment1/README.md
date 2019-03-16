@@ -15,7 +15,11 @@ change your directory to assignment1
 
 run chrooot.sh with your input script (in this case it is run.sh)
 
+remember, your script must be in the assignment1 folder
+
 - `./chrooot.sh run.sh`
+        or
+- `./chrooot.sh yourscript.sh`
 
 ## What to expect
 
