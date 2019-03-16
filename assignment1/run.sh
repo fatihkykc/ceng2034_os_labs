@@ -2,5 +2,5 @@
 
 varpwd=$(pwd)
 if [ $varpwd = / ]; then
-	echo "bash is successfully jailed"
+	echo "gotcha! you are in jail."
 fi

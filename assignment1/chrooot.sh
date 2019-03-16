@@ -44,11 +44,23 @@ copy_dependencies()
 	fi
 }
 
-echo "Copying run.sh"
-cp $varpwd/run.sh ~/JAIL #script must be in the same directory with the chroot directory
+if [[ "$1" == *sh ]];
+then
+	
+	echo "Copying $1"
+	cp $varpwd/$1 ~/JAIL #script must be in the same directory with the chroot directory
 
-copy_binary bash #copy bash
+	copy_binary bash #copy bash
 
-echo "running test script..."
-sudo chroot JAIL /bin/bash ./run.sh
-sudo chroot JAIL /bin/bash
+	echo "running test script..."
+
+	sudo chroot JAIL /bin/bash ./$1
+
+	sudo chroot JAIL /bin/bash
+
+else
+	echo "you need to input a bash script to test."
+
+fi
+
+
