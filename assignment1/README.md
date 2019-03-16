@@ -9,13 +9,13 @@
 ## Usage
 
 copy this repository to your machine.
--`git clone https://github.com/fatihkykc/ceng2034_os_labs.git̀
+- `git clone https://github.com/fatihkykc/ceng2034_os_labs.git̀
 
 change your directory to assignment1
 
 run chrooot.sh with your input script (in this case it is run.sh)
 
--`./chrooot.sh run.sh`
+- `./chrooot.sh run.sh`
 
 ## What to expect
 
@@ -25,7 +25,7 @@ then it will run the 'run.sh' script in a jailed bash.
 expected output will be:
 ```
 Copying run.sh
-Copying shared files/libs to /home/unrool/JAIL...
+Copying shared files/libs to /home/yourname/JAIL...
 running test script...
 gotcha! you are in jail.
 bash-4.3# 
