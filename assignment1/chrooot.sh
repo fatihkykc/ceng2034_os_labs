@@ -44,6 +44,7 @@ copy_dependencies()
 	fi
 }
 
+
 if [[ "$1" == *sh ]];
 then
 	
@@ -54,9 +55,9 @@ then
 
 	echo "running test script..."
 
-	sudo chroot JAIL /bin/bash ./$1
+	sudo chroot $JAIL /bin/bash ./$1
 
-	sudo chroot JAIL /bin/bash
+	sudo chroot $JAIL /bin/bash
 
 else
 	echo "you need to input a bash script to test."
