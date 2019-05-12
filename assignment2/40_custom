@@ -1,0 +1,23 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry "Ubuntu 16.04 (LTS) Live Server amd64" --class ubuntu {
+   set isoname="ubuntu-16.04.6-server-amd64.iso"
+   set isofile="/home/unrool/Downloads/${isoname}"
+   loopback loop (hd0,5)$isofile
+   linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=${isofile} quiet splash
+   initrd (loop)/casper/initrd
+}
+
+
+menuentry "Ubuntu 16.04 (LTS) Live Server amd64 RAM VERSION" --class ubuntu {
+   set isoname="ubuntu-16.04.6-server-amd64.iso"
+   set isofile="/home/unrool/Downloads/${isoname}"
+   loopback loop (hd0,5)$isofile
+   linux (loop)/casper/vmlinuz.efi boot=casper toram persistent -- iso-scan/filename=${isofile} quiet splash
+   initrd (loop)/casper/initrd
+}
+
