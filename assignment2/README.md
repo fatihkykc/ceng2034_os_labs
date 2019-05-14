@@ -24,6 +24,7 @@ obtained by,
 sudo dd if=/dev/sda of=mbr.bin bs=512 count=1
 ``
 then;
+
 ``
 hd -n 512 mbr.bin > mbr_output.tx
 
