@@ -8,8 +8,8 @@ menuentry "Ubuntu 16.04 (LTS) Live Server amd64" --class ubuntu {
    set isoname="ubuntu-16.04.6-server-amd64.iso"
    set isofile="/home/unrool/Downloads/${isoname}"
    loopback loop (hd0,5)$isofile
-   linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=${isofile} quiet splash
-   initrd (loop)/casper/initrd
+   linux (loop)/install/vmlinuz boot=install iso-scan/filename=${isofile} quiet splash
+   initrd (loop)/install/initrd
 }
 
 
@@ -17,7 +17,7 @@ menuentry "Ubuntu 16.04 (LTS) Live Server amd64 RAM VERSION" --class ubuntu {
    set isoname="ubuntu-16.04.6-server-amd64.iso"
    set isofile="/home/unrool/Downloads/${isoname}"
    loopback loop (hd0,5)$isofile
-   linux (loop)/casper/vmlinuz.efi boot=casper toram persistent -- iso-scan/filename=${isofile} quiet splash
-   initrd (loop)/casper/initrd
+   linux (loop)/install/vmlinuz boot=install toram persistent -- iso-scan/filename=${isofile} quiet splash
+   initrd (loop)/install/initrd.gz
 }
 
