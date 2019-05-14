@@ -19,11 +19,12 @@ then you can install the server version as you wish.
 for the mbr_output_txt;
 
 it is the output of the first 512 bytes of the disk.
-obtained by,
-``
+obtained by;
+
+```
 sudo dd if=/dev/sda of=mbr.bin bs=512 count=1
 
 hd -n 512 mbr.bin > mbr_output.tx
 
-``
+```
 
